@@ -2,28 +2,20 @@ import React from "react";
 
 const projects = [
   {
-    title: "E-Commerce MERN Platform",
-    description: "Full-stack e-commerce application with user authentication, payment integration, and admin dashboard.",
-    image: "https://via.placeholder.com/400x250/6366f1/ffffff?text=E-Commerce+Platform",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    github: "https://github.com/yourusername/ecommerce",
-    live: "https://ecommerce-demo.com"
+    title: "TutorNepal",
+    description: "Frontend development for tuition matching platform connecting students with tutors across Nepal.",
+    image: "/tutornepal.png",
+    technologies: ["React", "Tailwind CSS", "Vite", "JavaScript"],
+    github: "https://github.com/Axkratos/Tutor",
+    live: "https://tutornepal.com"
   },
   {
-    title: "Task Management System",
-    description: "Collaborative project management tool with real-time updates and team collaboration features.",
-    image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Task+Manager",
-    technologies: ["React", "Socket.io", "Node.js", "PostgreSQL"],
-    github: "https://github.com/yourusername/taskmanager",
-    live: "https://taskmanager-demo.com"
-  },
-  {
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard with data visualization and real-time social media metrics.",
-    image: "https://via.placeholder.com/400x250/ec4899/ffffff?text=Social+Dashboard",
-    technologies: ["React", "Chart.js", "Express", "MongoDB"],
-    github: "https://github.com/yourusername/dashboard",
-    live: "https://dashboard-demo.com"
+    title: "AgroNepal",
+    description: "Full-stack development for agriculture platform with complete MERN stack implementation and production deployment.",
+    image: "/agronepal.png",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Vercel"],
+    github: "https://github.com/udayashankhii/AgroNepal",
+    live: "https://agronepal.vercel.app"
   }
 ];
 
@@ -38,13 +30,15 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Some of my recent work that showcases my skills and expertise
+            Real-world projects showcasing full-stack development skills built for Nepal market
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105">
+            <div key={index} // Change hover:scale-105 to hover:scale-102 or hover:scale-103
+className="group bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-700 
+hover:border-purple-500 transition-all duration-300 hover:scale-102">
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 

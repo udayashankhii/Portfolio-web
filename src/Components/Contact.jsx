@@ -43,7 +43,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Email</h4>
-                <p className="text-gray-400">udayashankhi@example.com</p>
+                <p className="text-gray-400">udayashankhi123@gmail.com</p>
               </div>
             </div>
 
@@ -59,11 +59,11 @@ export default function Contact() {
 
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-xl">📍</span>
+                <span className="text-xl"></span>
               </div>
               <div>
                 <h4 className="text-white font-semibold">Location</h4>
-                <p className="text-gray-400">Kathmandu, Nepal</p>
+                <p className="text-gray-400">Koteshwor, Kathmandu</p>
               </div>
             </div>
           </div>
