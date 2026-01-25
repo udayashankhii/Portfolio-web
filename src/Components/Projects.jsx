@@ -2,6 +2,14 @@ import React from "react";
 
 const projects = [
   {
+    title: "EverTrek Nepal",
+    description: "Full-stack trek booking platform connecting adventurers with authentic Himalayan trekking experiences across Nepal.",
+    image: "/evertreknepal.png",
+    technologies: ["React", "Django", "PostgreSQL", "Tailwind CSS", "Vite", "Cloudinary"],
+    github: "https://github.com/udayashankhi/trek-nepal",
+    live: "https://evertreknepal.vercel.app"
+  },
+  {
     title: "TutorNepal",
     description: "Frontend development for tuition matching platform connecting students with tutors across Nepal.",
     image: "/tutornepal.png",
@@ -36,7 +44,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} // Change hover:scale-105 to hover:scale-102 or hover:scale-103
+            <div key={index}
 className="group bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-700 
 hover:border-purple-500 transition-all duration-300 hover:scale-102">
               <div className="relative overflow-hidden">
