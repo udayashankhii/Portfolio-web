@@ -7,7 +7,7 @@ const projects = [
     image: "/evertreknepal.png",
     technologies: ["React", "Django", "PostgreSQL", "Tailwind CSS", "Vite", "Cloudinary"],
     github: "https://github.com/udayashankhi/trek-nepal",
-    live: "https://evertreknepal.vercel.app"
+    live: "https://evertreknepal.com"
   },
   {
     title: "TutorNepal",
