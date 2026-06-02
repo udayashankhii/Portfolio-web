@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -29,41 +30,57 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-slate-800/50">
+    <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Real-world projects showcasing full-stack development skills built for Nepal market
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index}
-className="group bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-700 
-hover:border-purple-500 transition-all duration-300 hover:scale-102">
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="group bg-white dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 
+              hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2"
+            >
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4 flex gap-2">
                     <a 
                       href={project.github}
-                      className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg hover:bg-white/30 transition-colors text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg hover:bg-white/30 transition-colors text-sm font-medium"
                     >
                       GitHub
                     </a>
                     <a 
                       href={project.live}
-                      className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
                     >
                       Live Demo
                     </a>
@@ -72,24 +89,24 @@ hover:border-purple-500 transition-all duration-300 hover:scale-102">
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed min-h-[60px]">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech} 
-                      className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs border border-purple-500/30"
+                      className="px-3 py-1 bg-gray-100 dark:bg-purple-500/20 text-gray-700 dark:text-purple-300 rounded-full text-xs font-medium border border-gray-200 dark:border-purple-500/30"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

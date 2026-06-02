@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-slate-700">
+    <footer className="py-12 border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400">
               &copy; {new Date().getFullYear()} Udaya Shankhi — All rights
               reserved.
             </p>

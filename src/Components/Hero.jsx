@@ -1,93 +1,82 @@
 import React from "react";
-import FloatingElements from "./FloatingElemts";
-import AnimatedCounter from "./AnimatedCounter";
+import {  ArrowRight } from "lucide-react";
+import { animate, motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
-      <FloatingElements />
-
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left Content */}
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <p className="text-gray-400 text-lg">Hi, I'm</p>
-            <h1 className="text-5xl md:text-6xl font-bold">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Udaya Shankhi
-              </span>
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-300 font-medium">
-              MERN Stack Developer
-            </h2>
-          </div>
-
-          <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
-            Building exceptional digital experiences with the MERN stack.
-            Passionate about creating scalable web applications that make a difference.
-          </p>
-
-          {/* Stats */}
-          <div className="flex space-x-12">
-            <div className="text-center">
-              <AnimatedCounter end={5} duration={2000} />
-              <p className="text-gray-500 text-sm uppercase tracking-wide mt-1">Projects</p>
-            </div>
-            <div className="text-center">
-              {/* <AnimatedCounter end={30} duration={2000} /> */}
-              {/* <p className="text-gray-500 text-sm uppercase tracking-wide mt-1">Clients</p> */}
-            </div>
-            <div className="text-center">
-              <AnimatedCounter end={3} duration={2000} />
-              <p className="text-gray-500 text-sm uppercase tracking-wide mt-1">Years</p>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#projects"
-              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:scale-105 transition-transform duration-200 text-center"
-            >
-              View My Work
-            </a>
-            <a 
-              href="#contact"
-              className="px-8 py-3 border border-gray-600 text-gray-300 rounded-lg font-medium hover:border-purple-500 hover:text-white transition-colors duration-200 text-center"
-            >
-              Get in Touch
-            </a>
-          </div>
+    <section id="home" className="flex items-center min-h-[70vh]">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="space-y-8 w-full"
+      >
+        <div className="space-y-6">
+          <motion.p 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gray-500 uppercase tracking-widest text-sm font-medium"
+          >
+            Hello
+          </motion.p>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Udaya Shankhi.</span>
+          </motion.h1>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl md:text-4xl text-gray-500 font-light"
+          >
+            MERN Stack Developer
+          </motion.h2>
         </div>
 
-        {/* Right Visual Elements */}
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="relative">
-            {/* Main Circle */}
-            <div className="w-80 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full opacity-80"></div>
+        <motion.div 
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="w-12 h-[2px] bg-purple-500 my-8 origin-left"
+        ></motion.div>
 
-            {/* Dark Circle Overlay */}
-            <div className="absolute top-16 left-16 w-48 h-48 bg-slate-800 rounded-full"></div>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl font-light"
+        >
+          I build high-quality digital experiences with clean code and minimal design. 
+          Passionate about performance, accessibility, and modern web architecture.
+        </motion.p>
 
-            {/* Floating Tech Icons */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center animate-float shadow-lg">
-              <span className="text-2xl">⚛️</span>
-            </div>
-
-            <div className="absolute top-20 -left-8 w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center animate-float-delay-1 shadow-lg">
-              <span className="text-2xl">⚡</span>
-            </div>
-
-            <div className="absolute bottom-8 -right-8 w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center animate-float-delay-2 shadow-lg">
-              <span className="text-2xl">🟢</span>
-            </div>
-
-            <div className="absolute -bottom-4 left-8 w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center animate-float shadow-lg">
-              <span className="text-2xl">🍃</span>
-            </div>
-          </div>
-        </div>
-      </div>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-col sm:flex-row gap-8 pt-4"
+        >
+          <a
+            href="#projects"
+            className="group flex items-center gap-2 border-b border-gray-400 dark:border-gray-600 pb-1 hover:border-purple-500 dark:hover:border-purple-400 transition-colors text-sm uppercase tracking-widest font-medium w-max text-gray-800 dark:text-gray-200"
+          >
+            View Work
+            <ArrowRight size={16} className="group-hover:translate-x-1 group-hover:text-purple-500 transition-all" />
+          </a>
+          <a 
+            href="#contact"
+            className="group flex items-center gap-2 border-b border-gray-400 dark:border-gray-600 pb-1 hover:border-pink-500 dark:hover:border-pink-400 transition-colors text-sm uppercase tracking-widest font-medium w-max text-gray-800 dark:text-gray-200"
+          >
+            Get in touch
+            <ArrowRight size={16} className="group-hover:translate-x-1 group-hover:text-pink-500 transition-all" />
+          </a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

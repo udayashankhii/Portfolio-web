@@ -9,9 +9,9 @@ import Skills from "./Components/Skill";
 import React from "react";
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-[#fdfdfd] dark:bg-[#0a0a0a] text-[#111111] dark:text-[#eaeaea] transition-colors duration-300">
       <Header />
-      <main>
+      <main className="pt-24 px-6 md:px-12 max-w-5xl mx-auto space-y-32">
         <Hero />
         <About />
         <Skills />

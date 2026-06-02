@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  body {
+    @apply bg-[#fdfdfd] text-[#111111] dark:bg-[#0a0a0a] dark:text-[#eaeaea];
+  }
+}
